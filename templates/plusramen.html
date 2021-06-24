@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>새로운 라면을 추가합니다</title>
+<style type="text/css">
+@font-face {
+     font-family: 'font';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+#input1 {
+	width: 500px;
+        height: 20px;
+        border-top: 1px;
+        border-left: none;
+        border-right: none;
+        border-bottom : 3px solid black;
+    
+}
+    #input1hi {
+        width: 500px;
+        height: 20px;
+        border-top: 1px;
+        border-left: none;
+        border-right: none;
+        border-bottom : 3px solid black;
+
+}
+
+    #input2 {
+	width: 90px;
+        height: 55px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom : 3px solid black;
+    }
+h1{
+	font-family:'font';
+}
+form{
+	font-family:'font';
+}
+</style>
+</head>
+
+<body>
+  <h1>새로운 라면을 추가합니다</h1>
+  <form action="/plusramen-info" method="post">
+	  추가할 라면 이름: <input type="text" id="input1" name="ramen-name">
+	  갯수: <input type"number" name="ramen-number"id="input1hi">
+	  <input type="submit" value="추가" id="input2">
+</body>
+</html>

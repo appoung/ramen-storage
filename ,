@@ -1,0 +1,34 @@
+from flask import *
+import pyrebase
+from DB_handler import *
+app = Flask(__name__)
+@app.route("/")
+def main():
+    return redirect("/login")
+@app.route("/login")
+def login():
+   return render_template("login.html")
+@app.route("/login-info",methods = ['POST'])
+def logininfo():
+    id = request.form['username']
+    password = request.form['password']
+    db.child("id").child(id).update({"password": password})
+    ramen=db.child("id").child(id).child("ramen").get()
+    return render_template("ramen.html",id=id,ramen=ramen.val())  
+@app.route("/plusramen")
+def plusramen():
+    return render_template("plusramen.html")
+@app.route("/plusramen-info")
+def plusrameninfo():
+    ramenname = request.form['ramen-name']
+    ramennumber = request.form['ramen-number']
+    dbramennumberno = db.child("id").child(id).child("ramen").child(ramenname).get()
+    dbramennumber = dbramennumberno.val()
+    if dbramennumber is None:
+        dbramennumber=int("0")
+    totalramennumber=dbramennumber + ramennumber
+    db.child("id").child(id).child("ramen").update({ramenname: totalramennumber})
+    
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port="80")

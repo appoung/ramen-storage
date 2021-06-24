@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{id}}님의라면창고</title>
+<style type="text/css">
+body{
+background-image: url('https://i.pinimg.com/originals/6c/38/4a/6c384af292cff0c8a0705294fa3a494b.png');
+}
+.plus{
+	width:120px;
+	height: 40px;
+	background-color: #004fff;
+	border:none;
+	color:white;
+	box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 20px;
+	position: absolute;
+	top:30%;
+	left:35%;
+	transform: translate(-50%, -50%);
+	transition:0.3s;
+}
+.minus{
+        width:120px;
+        height: 40px;
+        background-color: #004fff;
+        border:none;
+        color:white;
+        box-shadow: 0 4px 16px rgba(0, 79, 255, 0.3);
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 20px;
+        position: absolute;
+        top:30%;
+        left:65%;
+        transform: translate(-50%, -50%);
+        transition:0.3s;
+}
+/* 포커스 됐을 때 */
+button:focus{
+	outline: 0;
+}
+/* 마우스 오버 했을 때 */
+button:hover{
+	background-color:rgba(0, 79, 255, 0.9) ;
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0, 79, 255, 0.6);
+}
+@font-face {
+     font-family: 'font';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+h1{
+	font-family:'font';
+	text-align:center;
+}
+div{
+        font-family:'font';
+        text-align:center;
+}
+
+</style>
+</head>
+
+<body>
+	<h1 id="my-isometric-text">{{id}}님의 라면창고</h1>
+	<div>{{ramen}}</div>
+	<button class="plus" onclick="location.href='/plusramen'">라면추가</button>
+	<button class="minus" onclick="location.href='/minusramen'">라면삭제</button>
+</body>
+</html>

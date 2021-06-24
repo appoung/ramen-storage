@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>라면을 먹으셨군요!라면을 삭제합니다</title>
+  <style type="text/css">
+@font-face {
+     font-family: 'font';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+#input1 {
+        width: 500px;
+        height: 20px;
+        border-top: 1px;
+        border-left: none;
+        border-right: none;
+        border-bottom : 3px solid black;
+
+}
+#input2 {
+        width: 90px;
+        height: 55px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom : 3px solid black;
+    }
+h1{
+	font-family:'font';
+}
+form{
+	font-family:'font';
+}
+input, textarea, button { appearance: none; -moz-appearance: none; -webkit-appearance: none; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; }
+</style>
+
+</head>
+
+<body>
+  <h1>라면을 삭제합니다</h1>
+  <form action="/minusramen-info" method="post">
+	  먹은 라면 이름:<br> <input type="text"id="input1" name="ramen-name"placeholder="입력">
+          
+	  <br>갯수:<br> <input type"number" name="ramen-number"id="input1"placeholder="입력">
+          <input type="submit" value="삭제"id="input2">
+</body>
+</html>
+~   
